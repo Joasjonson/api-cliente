@@ -8,7 +8,7 @@ class ClientesViewSet(viewsets.ModelViewSet):
     queryset = Cliente.objects.all()
     serializer_class = ClienteSerializer
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter, filters.SearchFilter]
-    ordering_fields = ['nome']
+    ordering_fields = ['id']
     search_fields = ['nome', 'rg']
     filterset_fields = ['ativo']
-
+    
